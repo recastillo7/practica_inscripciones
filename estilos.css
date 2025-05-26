@@ -1,0 +1,267 @@
+/* 
+    Hoja de estilos principal para la aplicación de inscripciones.
+    Desarrollado por Rolando Castillo - práctica UTPL 2025.
+    Se utiliza una paleta minimalista con acento coral (#ff758f).
+    Todos los estilos han sido revisados y optimizados para claridad y mantenimiento.
+*/
+
+/* El body utiliza un fondo claro con una imagen SVG personalizada y tipografía moderna */
+body {
+    background: #f7f7fa url('img/fondo.svg') no-repeat center top fixed;
+    background-size: cover;
+    color: #22223b;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Los títulos principales se centran y usan un color oscuro para contraste */
+h1, h2 {
+    color: #22223b;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* Tarjetas, formularios y paneles mantienen un fondo blanco y bordes suaves */
+form, .panel-container, .curso, .contenedor, .perfil, .inscritos, .ofertados {
+    background: #fff;
+    color: #22223b;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(255,117,143,0.06);
+    border: 1px solid #e0e3e8;
+}
+
+/* El formulario se centra y tiene un padding generoso para mejor usabilidad */
+form {
+    border: none;
+    max-width: 350px;
+    margin: 40px auto 24px auto;
+    padding: 32px 24px;
+}
+
+/* Las etiquetas de los formularios son claras y legibles */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* Los campos de entrada son amplios y accesibles */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    background: #fafafa;
+    color: #111;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+/* Al enfocar un campo, el borde se resalta */
+input:focus {
+    border: 1.5px solid #111;
+    outline: none;
+}
+
+/* Botones principales y secundarios usan el color de acento y ocupan todo el ancho solo en formularios */
+button, .btn-secundario {
+    width: 100%;
+    padding: 12px;
+    background: #ff758f;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255,117,143,0.08);
+    display: block;
+}
+
+/* Botón secundario con margen superior adicional */
+.btn-secundario {
+    margin: 16px 0 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+/* Al pasar el mouse, el botón se oscurece para indicar interacción */
+button:hover, .btn-secundario:hover {
+    background: #22223b;
+    color: #fff !important;
+}
+
+/* El botón del panel es compacto y usa el color de acento */
+.panel-btn {
+    display: inline-block;
+    width: auto;
+    min-width: 140px;
+    padding: 12px 28px;
+    background: #ff758f;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin: 24px 0 0 32px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255,117,143,0.08);
+}
+
+/* Hover del botón del panel */
+.panel-btn:hover {
+    background: #22223b;
+    color: #fff !important;
+}
+
+/* Tarjetas de cursos con efecto hover en color de acento */
+.curso {
+    border: none;
+    margin: 24px auto;
+    max-width: 500px;
+    padding: 24px 20px;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Los textos y enlaces dentro de la tarjeta de curso son oscuros por defecto */
+.curso a,
+.curso h2,
+.curso p {
+    color: #22223b;
+    transition: color 0.2s;
+}
+
+/* Al pasar el mouse sobre la tarjeta, el fondo y los textos se invierten */
+.curso:hover {
+    background: #ff758f;
+    color: #fff;
+}
+
+.curso:hover a,
+.curso:hover h2,
+.curso:hover p {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Panel principal centrado y con padding */
+.panel-container {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    padding: 32px 28px 28px 28px;
+    border: none;
+}
+
+/* Secciones del panel con fondo blanco y bordes suaves */
+.perfil, .inscritos, .ofertados {
+    background: #fff;
+    color: #111;
+    border: none;
+    margin: 20px 0;
+    padding: 18px 18px 10px 18px;
+    border-radius: 10px;
+}
+
+/* Párrafos con margen inferior para separación */
+p {
+    margin-bottom: 10px;
+}
+
+/* Contenedor general para formularios y mensajes */
+.contenedor {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+/* Botón de cerrar sesión con color de acento y sombra */
+.logout-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    background: #ff758f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(255,117,143,0.08);
+}
+
+/* Hover del botón de cerrar sesión */
+.logout-btn:hover {
+    background: #22223b;
+    color: #fff;
+}
+
+/* Mensaje de confirmación con borde y fondo blanco */
+.confirmacion-exito {
+    background: #fff;
+    border: 1.5px solid #111;
+    color: #111;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Listas sin viñetas y con separación entre elementos */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    color: #222;
+}
+
+/* Enlaces generales con transición de color */
+a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Footer minimalista y centrado */
+.footer-app {
+    width: 100%;
+    background: transparent;
+    color: #22223b;
+    text-align: center;
+    font-size: 15px;
+    padding: 32px 0 18px 0;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}

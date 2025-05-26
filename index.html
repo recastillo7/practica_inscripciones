@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Inscripción de Cursos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <?php 
+    if (file_exists('process.php')) {
+        include 'process.php'; 
+    } else {
+        error_log('process.php not found');
+    }
+    ?>
+     <div class="contenedor">
+        <h1>Bienvenido al Sistema de Inscripción de Cursos</h1>
+        <form action="login.php" method="POST">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <br>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <a href="registro.php" class="btn-secundario">Registrarse</a>
+        <!-- El enlace a cursos.php debe mostrarse solo si el usuario está autenticado -->
+        <!-- <a href="cursos.php">Ver cursos disponibles</a> -->
+    </div>
+</body>
+</html>
